@@ -11,7 +11,55 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #111;
+  background-color: #fafafa;
+}
+body.dark{
+  background: #232c35;
+  color: #fafafa;
+}
+.checkbox{
+  opacity: 0;
+  position: absolute;
+}
+.label{
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+
+  transform: scale(1.5);
+}
+.label .ball{
+  background-color: #fafafa;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+
+  height: 22px;
+  width: 22px;
+
+  transform: translate(0px);
+  transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+.fa-moon{
+  color: #f1c40f;
+
+}
+.fa-sun{
+  color: #f39c12;
 }
 
 a {
@@ -557,6 +605,11 @@ section {
 
 .section-bg {
   background-color: #f9f8ff;
+  color: #111;
+}
+.section-bg.dark{
+  background: #232c35;
+  color: #fafafa;
 }
 
 .section-title {
@@ -572,6 +625,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  text-align: left;
 }
 
 .section-title h2::after {
@@ -970,6 +1024,9 @@ section {
   overflow: hidden;
   z-index: 1;
 }
+.portfolio hr{
+  border: 5px solid #57E3F2;
+}
 
 .portfolio .portfolio-wrap::before {
   content: "";
@@ -1051,10 +1108,6 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1111,6 +1164,12 @@ section {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+}
+.form-group input{
+  padding: 10px;
+}
+.form-group label{
+  padding: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -1501,8 +1560,9 @@ section {
 #footer {
   color: #fff;
   font-size: 14px;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
+  background: linear-gradient(90deg, rgba(88, 70, 249, 0.5) 0%, #57E3F2 100%), url("../img/counts-bg.png") center center no-repeat;
   background-size: cover;
+  
 }
 
 #footer .footer-top {
@@ -1663,3 +1723,46 @@ section {
 ul{
   list-style-image: url(../img/Seta.png);
 }
+/*--------------------------------------------------------------
+# img Style
+--------------------------------------------------------------*/
+img{
+  width: 100%;
+  height: auto;
+}
+/*--------------------------------------------------------------
+# Login Style
+--------------------------------------------------------------*/
+#Logindiv{
+  border: 2px solid #57E3F2;
+  padding: 12px;
+  border-radius: 10px;
+}
+#subheader{
+  background-image: url(../img/hero-bg.jpg);
+  border-radius: 10px;
+  
+}
+.btn{
+  border-radius: 10px;
+  border-color: #57E3F2;
+  background-color: #57E3F2;
+  color: #fafafa;
+}
+.btn:hover{
+  border-color: #12d7ec;
+  background-color: #12d7ec;
+  color: #fafafa;
+}
+/*--------------------------------------------------------------
+# Cadastro Style
+--------------------------------------------------------------*/
+#Cadastrodiv{
+  border: 2px solid #57E3F2;
+  border-radius: 10px;
+  padding: 20px;
+}
+#imgdiv{
+  align-items: center;
+}
+
